@@ -7,7 +7,7 @@
     <meta name="author" content="Burhan Mafazi">
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('front/img/icon_up.png') }}">
-    <title>@yield('title', 'Booku | Universitas Pertamina')</title>
+    <title>@yield('title', 'UPer Press | Universitas Pertamina')</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">

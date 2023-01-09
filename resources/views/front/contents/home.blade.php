@@ -24,7 +24,7 @@
                     <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
-                                <input type="text" placeholder="Apa yang sedang Anda butuhkan??">
+                                <input type="text" placeholder="Apa yang sedang Anda butuhkan?">
                                 <button type="submit" class="site-btn">CARI</button>
                             </form>
                         </div>
@@ -40,8 +40,8 @@
                     </div>
                     <div class="hero__item set-bg" data-setbg="{{ asset('front/img/hero/banner.jpg') }}">
                         <div class="hero__text">
-                            <span>FRUIT FRESH</span>
-                            <h2>Vegetable <br />100% Organic</h2>
+                            <span>BUKU TERBAIK</span>
+                            <h2>Diskon Buku <br> Hingga 50%</h2>
                             <p>Free Pickup and Delivery Available</p>
                             <a href="#" class="primary-btn">SHOP NOW</a>
                         </div>
@@ -323,7 +323,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="latest-product__text">
-                        <h4>Produk Unggulan</h4>
+                        <h4>Produk Terlaris</h4>
                         <div class="latest-product__slider owl-carousel">
                             <div class="latest-prdouct__slider__item">
                                 <a href="#" class="latest-product__item">

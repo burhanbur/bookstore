@@ -43,8 +43,8 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="#">Beranda</a></li>
-                            <li><a href="#">Produk</a></li>
+                            <li class="@if (Request::is('/') || Request::is('home*')) active @endif"><a href="{{ route('home') }}">Beranda</a></li>
+                            <li class="@if (Request::is('product-detail*')) active @endif"><a href="{{ route('shop') }}">Produk</a></li>
                             <!-- <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
@@ -53,8 +53,8 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> -->
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Kontak</a></li>
+                            <li class="@if (Request::is('blog*')) active @endif"><a href="{{ route('blog') }}">Blog</a></li>
+                            <li class="@if (Request::is('contact*')) active @endif"><a href="{{ route('contact') }}">Kontak</a></li>
                         </ul>
                     </nav>
                 </div>
