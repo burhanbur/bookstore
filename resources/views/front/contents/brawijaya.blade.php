@@ -78,6 +78,16 @@
                         <p>
                         	Buku ini disusun untuk memudahkan seluruh masyarakat jasa konstruksi memahami apa itu Standar K4, SMKK, Rancangan Konseptual SMKK, 5 (lima) Elemen SMKK, Biaya Penerapan SMKK, dan diharapkan pembaca mampu memahami dan melaksanakan aturan mengenai keselamatan konstruksi di dalam pelaksanaan setiap tahapan konstruksi. Buku ini disusun berdasarkan materi bimbingan teknis dan sosialisasi yang telah kami lakukan baik di lingkungan Kementerian PUPR, Kementerian/Lembaga lain, Pemda, dan Asosiasi.
                         </p>
+                        <p>
+                            <strong>Penulis</strong> : Ir. Brawijaya, SE, MEIE, MSCE, Ph.D, IPU, ASEAN.Eng <br>
+                            <strong>Editor</strong>  : Tri Kurnia Rahayu Jumeri <br>
+                            <strong>Bahasa</strong> : Indonesia<br>
+                            <strong>Format</strong>  : Buku Cetak <br>
+                            <strong>Jumlah halaman</strong> : - <br>
+                            <strong>Penerbit</strong> : UPer Press<br>
+                            <strong>ISBN</strong> :  -<br>
+                            <strong>Status</strong> : Akan Terbit <br>
+                        </p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">

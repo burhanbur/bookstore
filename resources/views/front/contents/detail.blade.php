@@ -78,6 +78,16 @@
                         <p>
                         	Buku ini membahas konsep dasar berbagai metode NLP yang diadopsi dalam protein analisis dan kemudian penerapannya dalam mempelajari protein. Buku ini juga membahas keberhasilan, potensi, serta keterbatasan algoritma NLP dalam mempelajari protein.
                         </p>
+                        <p>
+                        	<strong>Penulis</strong> : Meredita Susanty <br>
+							<strong>Editor</strong>  : Eka Budhi Septiawan <br>
+							<strong>Bahasa</strong> : Indonesia<br>
+							<strong>Format</strong>  : Buku Cetak <br>
+							<strong>Jumlah halaman</strong> : - <br>
+							<strong>Penerbit</strong> : UPer Press<br>
+							<strong>ISBN</strong> :  -<br>
+							<strong>Status</strong> : Akan Terbit <br>
+                        </p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
