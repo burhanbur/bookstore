@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{{ asset('front/img/logo.png') }}" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{ asset('front/img/logo_up2.png') }}" alt=""></a> <strong>UPer Press</strong>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -53,7 +53,7 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> -->
-                            <li class="@if (Request::is('blog*')) active @endif"><a href="{{ route('blog') }}">Blog</a></li>
+                            <!-- <li class="@if (Request::is('blog*')) active @endif"><a href="{{ route('blog') }}">Blog</a></li> -->
                             <li class="@if (Request::is('contact*')) active @endif"><a href="{{ route('contact') }}">Kontak</a></li>
                         </ul>
                     </nav>
@@ -61,10 +61,10 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
+                            <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li> -->
+                            <!-- <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li> -->
                         </ul>
-                        <div class="header__cart__price">item: <span>Rp 0</span></div>
+                        <!-- <div class="header__cart__price">item: <span>Rp 0</span></div> -->
                     </div>
                 </div>
             </div>

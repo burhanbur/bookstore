@@ -10,14 +10,13 @@
                         <div class="sidebar__item">
                             <h4>Kategori</h4>
 	                        <ul>
-	                            <li><a href="#">Buku</a></li>
-	                            <li><a href="#">Diktat Kuliah</a></li>
-	                            <li><a href="#">Merchandise</a></li>
-	                            <li><a href="#">Printing</a></li>
-	                            <li><a href="#">Elektronik</a></li>
+	                        	@foreach(\App\Utilities\Dropdown::listCategories() as $k => $v)
+	                        		<li><a href="#">{{ $v }}</a></li>
+	                        	@endforeach
 	                        </ul>
                         </div>
-                        <div class="sidebar__item">
+
+                        {{-- <div class="sidebar__item">
                             <h4>Harga</h4>
                             <div class="price-range-wrap">
                                 <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
@@ -35,7 +34,7 @@
                             </div>
                         </div>
                         
-                        {{-- <div class="sidebar__item sidebar__item__color--option">
+                        <div class="sidebar__item sidebar__item__color--option">
                             <h4>Colors</h4>
                             <div class="sidebar__item__color sidebar__item__color--white">
                                 <label for="white">
@@ -110,58 +109,58 @@
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="{{ asset('front/img/latest-product/lp-1.jpg') }}" alt="">
+                                                <img src="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Convolutional Neural Network Deep Learning</h6>
-                                                <span>Rp 100.000</span>
+                                                <h6>Protein Representation – Sequence Embedding</h6>
+                                                <!-- <span>Rp 100.000</span> -->
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="{{ asset('front/img/latest-product/lp-2.jpg') }}" alt="">
+                                                <img src="{{ asset('front/img/product/details/metode-komputasi-geofisika-bg.jpg') }}" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Convolutional Neural Network Deep Learning</h6>
-                                                <span>Rp 100.000</span>
+                                                <h6>Buku ajar metode komputasi geofisika menggunakan Python</h6>
+                                                <!-- <span>Rp 100.000</span> -->
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="{{ asset('front/img/latest-product/lp-3.jpg') }}" alt="">
+                                                <img src="{{ asset('front/img/product/details/dasar-pemrograman-bahasa-c-bg.jpg') }}" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Convolutional Neural Network Deep Learning</h6>
-                                                <span>Rp 100.000</span>
+                                                <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                                <!-- <span>Rp 100.000</span> -->
                                             </div>
                                         </a>
                                     </div>
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="{{ asset('front/img/latest-product/lp-1.jpg') }}" alt="">
+                                                <img src="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Convolutional Neural Network Deep Learning</h6>
-                                                <span>Rp 100.000</span>
+                                                <h6>Protein Representation – Sequence Embedding</h6>
+                                                <!-- <span>Rp 100.000</span> -->
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="{{ asset('front/img/latest-product/lp-2.jpg') }}" alt="">
+                                                <img src="{{ asset('front/img/product/details/metode-komputasi-geofisika-bg.jpg') }}" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Convolutional Neural Network Deep Learning</h6>
-                                                <span>Rp 100.000</span>
+                                                <h6>Buku ajar metode komputasi geofisika menggunakan Python</h6>
+                                                <!-- <span>Rp 100.000</span> -->
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="{{ asset('front/img/latest-product/lp-3.jpg') }}" alt="">
+                                                <img src="{{ asset('front/img/product/details/dasar-pemrograman-bahasa-c-bg.jpg') }}" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Convolutional Neural Network Deep Learning</h6>
-                                                <span>Rp 100.000</span>
+                                                <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                                <!-- <span>Rp 100.000</span> -->
                                             </div>
                                         </a>
                                     </div>
@@ -173,15 +172,15 @@
                 <div class="col-lg-9 col-md-7">
                     <div class="product__discount">
                         <div class="section-title product__discount__title">
-                            <h2>Sale Off</h2>
+                            <h2>Buku Terbaik</h2>
                         </div>
                         <div class="row">
                             <div class="product__discount__slider owl-carousel">
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
                                         <div class="product__discount__item__pic set-bg"
-                                            data-setbg="{{ asset('front/img/product/discount/pd-1.jpg') }}">
-                                            <div class="product__discount__percent">-20%</div>
+                                            data-setbg="{{ asset('front/img/product/details/metode-komputasi-geofisika-bg.jpg') }}">
+                                            <!-- <div class="product__discount__percent">-20%</div> -->
                                             <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -190,16 +189,16 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Buku</span>
-                                            <h5><a href="#">Kimia dasar I : buku ajar</a></h5>
-                                            <div class="product__item__price">Rp 80.000 <span>Rp 100.000</span></div>
+                                            <h5><a href="#">Buku ajar metode komputasi geofisika menggunakan Python</a></h5>
+                                            <div class="product__item__price"><!-- Rp 80.000 --> <!-- <span>Rp 100.000</span> --></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
                                         <div class="product__discount__item__pic set-bg"
-                                            data-setbg="{{ asset('front/img/product/discount/pd-2.jpg') }}">
-                                            <div class="product__discount__percent">-20%</div>
+                                            data-setbg="{{ asset('front/img/product/details/fisika-dasar-1-bg.jpg') }}">
+                                            <!-- <div class="product__discount__percent">-20%</div> -->
                                             <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -209,15 +208,15 @@
                                         <div class="product__discount__item__text">
                                             <span>Buku</span>
                                             <h5><a href="#">Buku ajar : fisika dasar I</a></h5>
-                                            <div class="product__item__price">Rp 80.000 <span>Rp 100.000</span></div>
+                                            <div class="product__item__price"><!-- Rp 80.000 --> <!-- <span>Rp 100.000</span> --></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
                                         <div class="product__discount__item__pic set-bg"
-                                            data-setbg="{{ asset('front/img/product/discount/pd-3.jpg') }}">
-                                            <div class="product__discount__percent">-20%</div>
+                                            data-setbg="{{ asset('front/img/product/details/dasar-pemrograman-bahasa-c-bg.jpg') }}">
+                                            <!-- <div class="product__discount__percent">-20%</div> -->
                                             <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -227,15 +226,15 @@
                                         <div class="product__discount__item__text">
                                             <span>Buku</span>
                                             <h5><a href="#">Dasar pemrograman dalam bahasa pemrograman C++</a></h5>
-                                            <div class="product__item__price">Rp 80.000 <span>Rp 100.000</span></div>
+                                            <div class="product__item__price"><!-- Rp 80.000 --> <!-- <span>Rp 100.000</span> --></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
                                         <div class="product__discount__item__pic set-bg"
-                                            data-setbg="{{ asset('front/img/product/discount/pd-4.jpg') }}">
-                                            <div class="product__discount__percent">-20%</div>
+                                            data-setbg="{{ asset('front/img/product/details/teknik-pengeboran-bg.jpg') }}">
+                                            <!-- <div class="product__discount__percent">-20%</div> -->
                                             <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -244,16 +243,16 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Buku</span>
-                                            <h5><a href="#">Convolutional Neural Network Deep Learning</a></h5>
-                                            <div class="product__item__price">Rp 80.000 <span>Rp 100.000</span></div>
+                                            <h5><a href="#">Teknik Pengeboran II</a></h5>
+                                            <div class="product__item__price"><!-- Rp 80.000 --> <!-- <span>Rp 100.000</span> --></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
                                         <div class="product__discount__item__pic set-bg"
-                                            data-setbg="{{ asset('front/img/product/discount/pd-5.jpg') }}">
-                                            <div class="product__discount__percent">-20%</div>
+                                            data-setbg="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}">
+                                            <!-- <div class="product__discount__percent">-20%</div> -->
                                             <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -262,16 +261,16 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Buku</span>
-                                            <h5><a href="#">Modul Praktikum Mekanika Fluida dan Hidraulika</a></h5>
-                                            <div class="product__item__price">Rp 80.000 <span>Rp 100.000</span></div>
+                                            <h5><a href="#">Protein Representation – Sequence Embedding</a></h5>
+                                            <div class="product__item__price"><!-- Rp 80.000 --> <!-- <span>Rp 100.000</span> --></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
                                         <div class="product__discount__item__pic set-bg"
-                                            data-setbg="{{ asset('front/img/product/discount/pd-6.jpg') }}">
-                                            <div class="product__discount__percent">-20%</div>
+                                            data-setbg="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}">
+                                            <!-- <div class="product__discount__percent">-20%</div> -->
                                             <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -281,7 +280,7 @@
                                         <div class="product__discount__item__text">
                                             <span>Buku</span>
                                             <h5><a href="#">Manajemen Keselamatan Konstruksi Jilid 1</a></h5>
-                                            <div class="product__item__price">Rp 80.000 <span>Rp 100.000</span></div>
+                                            <div class="product__item__price"><!-- Rp 80.000 --> <!-- <span>Rp 100.000</span> --></div>
                                         </div>
                                     </div>
                                 </div>
@@ -292,16 +291,16 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                                 <div class="filter__sort">
-                                    <span>Sort By</span>
+                                    <span>Urutkan Berdasarkan</span>
                                     <select>
-                                        <option value="0">Default</option>
-                                        <option value="0">Default</option>
+                                        <option value="0">Nama</option>
+                                        <option value="0">Harga</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    <h6><span>16</span> Products found</h6>
+                                    <h6><span>12</span> Produk Ditemukan</h6>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
@@ -315,7 +314,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-1.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -323,14 +322,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Manajemen Keselamatan Konstruksi Jilid 1</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-2.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -338,14 +337,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Protein Representation – Sequence Embedding</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-3.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/metode-komputasi-geofisika-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -353,14 +352,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Buku ajar metode komputasi geofisika menggunakan Python</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-4.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/dasar-pemrograman-bahasa-c-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -368,14 +367,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Dasar pemrograman dalam bahasa pemrograman C++</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-5.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/teknik-pengeboran-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -383,14 +382,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Teknik Pengeboran II</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-6.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/fisika-dasar-1-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -398,14 +397,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Buku ajar : fisika dasar II</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-7.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/dasar-komputasional-bahasa-c-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -413,14 +412,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Berpikir komputasional dalam bahasa pemrograman c++</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-8.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/fisika-dasar-2-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -428,14 +427,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Buku ajar : fisika dasar II</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-9.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/teknik-pengeboran-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -443,14 +442,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Teknik Pengeboran II</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-10.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -458,14 +457,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Manajemen Keselamatan Konstruksi Jilid 1</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-11.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -473,14 +472,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Protein Representation – Sequence Embedding</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/product-12.jpg') }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/metode-komputasi-geofisika-bg.jpg') }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -488,8 +487,8 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Convolutional Neural Network Deep Learning</a></h6>
-                                    <h5>Rp 100.000</h5>
+                                    <h6><a href="#">Buku ajar metode komputasi geofisika menggunakan Python</a></h6>
+                                    <!-- <h5>Rp 100.000</h5> -->
                                 </div>
                             </div>
                         </div>

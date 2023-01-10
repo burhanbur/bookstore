@@ -12,11 +12,9 @@
                             <span>Semua Kategori</span>
                         </div>
                         <ul>
-                            <li><a href="#">Buku</a></li>
-                            <li><a href="#">Diktat Kuliah</a></li>
-                            <li><a href="#">Merchandise</a></li>
-                            <li><a href="#">Printing</a></li>
-                            <li><a href="#">Elektronik</a></li>
+                        	@foreach(\App\Utilities\Dropdown::listCategories() as $k => $v)
+                        		<li><a href="#">{{ $v }}</a></li>
+                        	@endforeach
                         </ul>
                     </div>
                 </div>
@@ -34,7 +32,7 @@
                             </div>
                             <div class="hero__search__phone__text">
                                 <strong>(021) 50857540</strong><br>
-                                <span>support 24/7 time</span>
+                                <!-- <span>support 24/7 time</span> -->
                             </div>
                         </div>
                     </div>
@@ -68,7 +66,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
                         <h3>Protein Representation - Sequence Embedding</h3>
-                        <div class="product__details__rating">
+                        <!-- <div class="product__details__rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -76,7 +74,7 @@
                             <i class="fa fa-star-half-o"></i>
                             <span>(4 ulasan)</span>
                         </div>
-                        <div class="product__details__price">Rp 100.000</div>
+                        <div class="product__details__price">Rp 100.000</div> -->
                         <p>
                         	Buku ini membahas konsep dasar berbagai metode NLP yang diadopsi dalam protein analisis dan kemudian penerapannya dalam mempelajari protein. Buku ini juga membahas keberhasilan, potensi, serta keterbatasan algoritma NLP dalam mempelajari protein.
                         </p>
@@ -118,7 +116,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
-                                    aria-selected="false">Ulasan <span>(4)</span></a>
+                                    aria-selected="false">Ulasan <span>(0)</span></a>
                             </li>
                         </ul>
                         <div class="tab-content">
@@ -176,7 +174,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6><a href="#">Manajemen Keselamatan Konstruksi Jilid 1</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -191,7 +189,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6><a href="#">Buku ajar metode komputasi geofisika menggunakan Python</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -206,7 +204,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6><a href="#">Dasar pemrograman dalam bahasa pemrograman C++</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -221,7 +219,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6><a href="#">Buku Ajar : Fisika Dasar I</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>

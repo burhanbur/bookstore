@@ -3,7 +3,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="{{ asset('front/img/logo.png') }}" alt=""></a>
+                            <a href="{{ route('home') }}"><img src="{{ asset('front/img/logo_up2.png') }}" alt=""></a>
                         </div>
                         <ul>
                             <li><strong><i class="fa fa-map-marker"></i></strong> &nbsp; Jl. Teuku Nyak Arief, Simprug, Kebayoran Lama, Jakarta 12220.</li>
@@ -17,9 +17,8 @@
                         <h6>Layanan Kami</h6>
                         <ul>
                             <li><a href="#">Bantuan</a></li>
-                            <li><a href="#">Kebijakan</a></li>
-                            <li><a href="#">Penerbitan</a></li>
-                            <li><a href="#">Penulis</a></li>
+                            <li><a href="{{ asset('surat_pernyataan_keaslian.docx') }}">Kebijakan</a></li>
+                            <li><a href="{{ asset('pedoman_penerbitan_buku_perpus_univ_pertamina_4.pdf') }}">Penerbitan</a></li>
                         </ul> 
                     </div>
                 </div>
@@ -27,11 +26,9 @@
                     <div class="footer__widget">
                         <h6>Kategori</h6>
                         <ul>
-                            <li><a href="#">Buku</a></li>
-                            <li><a href="#">Diktat Kuliah</a></li>
-                            <li><a href="#">Merchandise</a></li>
-                            <li><a href="#">Printing</a></li>
-                            <li><a href="#">E-Book</a></li>
+                            @foreach(\App\Utilities\Dropdown::listCategories() as $k => $v)
+                                <li><a href="#">{{ $v }}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -60,7 +57,7 @@
                               Copyright &copy;<script>document.write(new Date().getFullYear());</script> UPer Press. All rights reserved.
                             </p>
                         </div>
-                        <div class="footer__copyright__payment"><img src="{{ asset('front/img/payment-item.png') }}" alt=""></div>
+                        <!-- <div class="footer__copyright__payment"><img src="{{ asset('front/img/payment-item.png') }}" alt=""></div> -->
                     </div>
                 </div>
             </div>

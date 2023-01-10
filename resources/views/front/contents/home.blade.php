@@ -12,11 +12,9 @@
                             <span>Semua Kategori</span>
                         </div>
                         <ul>
-                            <li><a href="#">Buku</a></li>
-                            <li><a href="#">Diktat Kuliah</a></li>
-                            <li><a href="#">Merchandise</a></li>
-                            <li><a href="#">Printing</a></li>
-                            <li><a href="#">Elektronik</a></li>
+                        	@foreach(\App\Utilities\Dropdown::listCategories() as $k => $v)
+                        		<li><a href="#">{{ $v }}</a></li>
+                        	@endforeach
                         </ul>
                     </div>
                 </div>
@@ -34,16 +32,16 @@
                             </div>
                             <div class="hero__search__phone__text">
                                 <strong>(021) 50857540</strong><br>
-                                <span>support 24/7 time</span>
+                                <!-- <span>support 24/7 time</span> -->
                             </div>
                         </div>
                     </div>
                     <div class="hero__item set-bg" data-setbg="{{ asset('front/img/hero/banner.jpg') }}">
                         <div class="hero__text">
                             <span>BUKU TERBAIK</span>
-                            <h2>Diskon Buku <br> Hingga 50%</h2>
+                            <!-- <h2>Diskon Buku <br> Hingga 50%</h2> -->
                             <p>Free Pickup and Delivery Available</p>
-                            <a href="#" class="primary-btn">SHOP NOW</a>
+                            <!-- <a href="#" class="primary-btn">SHOP NOW</a> -->
                         </div>
                     </div>
                 </div>
@@ -58,16 +56,16 @@
             <div class="row">
                 <div class="categories__slider owl-carousel">
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="{{ asset('front/img/categories/product-item1.jpg') }}">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('front/img/categories/product-item3.jpg') }}">
                             <h5><a href="#">Buku</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="{{ asset('front/img/categories/product-item2.jpg') }}">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('front/img/categories/product-item4.jpg') }}">
                             <h5><a href="#">Diktat Kuliah</a></h5>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    {{-- <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="{{ asset('front/img/categories/product-item3.jpg') }}">
                             <h5><a href="#">Merchandise</a></h5>
                         </div>
@@ -81,7 +79,7 @@
                         <div class="categories__item set-bg" data-setbg="{{ asset('front/img/categories/product-item5.jpg') }}">
                             <h5><a href="#">Elektronik</a></h5>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -101,8 +99,8 @@
                             <li class="active" data-filter="*">Semua</li>
                             <li data-filter=".oranges">Buku</li>
                             <li data-filter=".fresh-meat">Diktat Kuliah</li>
-                            <li data-filter=".vegetables">Merchandise</li>
-                            <li data-filter=".fastfood">Elektronik</li>
+                            <!-- <li data-filter=".vegetables">Merchandise</li> -->
+                            <!-- <li data-filter=".fastfood">Elektronik</li> -->
                         </ul>
                     </div>
                 </div>
@@ -118,8 +116,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Berpikir komputasional dalam bahasa pemrograman c++</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -133,8 +131,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Dasar pemrograman dalam bahasa pemrograman C++</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -148,8 +146,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Buku ajar : fisika dasar I</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -163,8 +161,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Buku ajar metode komputasi geofisika menggunakan Python</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -178,8 +176,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Manajemen Keselamatan Konstruksi Jilid 1</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -193,8 +191,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Berpikir komputasional dalam bahasa pemrograman c++</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -208,8 +206,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Dasar pemrograman dalam bahasa pemrograman C++</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -223,8 +221,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>Rp 100.000</h5>
+                            <h6><a href="#">Buku ajar : fisika dasar I</a></h6>
+                            <!-- <h5>Rp 100.000</h5> -->
                         </div>
                     </div>
                 </div>
@@ -234,7 +232,7 @@
     <!-- Featured Section End -->
 
     <!-- Banner Begin -->
-    <div class="banner">
+    {{-- <div class="banner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -249,7 +247,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Banner End -->
 
     <!-- Latest Product Section Begin -->
@@ -266,8 +264,8 @@
                                         <img src="{{ asset('front/img/categories/product-item1.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Berpikir komputasional dalam bahasa pemrograman c++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -275,8 +273,8 @@
                                         <img src="{{ asset('front/img/categories/product-item2.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -284,8 +282,8 @@
                                         <img src="{{ asset('front/img/categories/product-item3.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Buku ajar : fisika dasar I</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                             </div>
@@ -295,8 +293,8 @@
                                         <img src="{{ asset('front/img/categories/product-item1.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Berpikir komputasional dalam bahasa pemrograman c++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -304,8 +302,8 @@
                                         <img src="{{ asset('front/img/categories/product-item2.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -313,8 +311,8 @@
                                         <img src="{{ asset('front/img/categories/product-item3.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Buku ajar : fisika dasar I</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                             </div>
@@ -331,8 +329,8 @@
                                         <img src="{{ asset('front/img/categories/product-item1.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Berpikir komputasional dalam bahasa pemrograman c++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -340,8 +338,8 @@
                                         <img src="{{ asset('front/img/categories/product-item2.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -349,8 +347,8 @@
                                         <img src="{{ asset('front/img/categories/product-item3.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Buku ajar : fisika dasar I</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                             </div>
@@ -360,8 +358,8 @@
                                         <img src="{{ asset('front/img/categories/product-item1.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Berpikir komputasional dalam bahasa pemrograman c++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -369,8 +367,8 @@
                                         <img src="{{ asset('front/img/categories/product-item2.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -378,8 +376,8 @@
                                         <img src="{{ asset('front/img/categories/product-item3.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Buku ajar : fisika dasar I</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                             </div>
@@ -396,8 +394,8 @@
                                         <img src="{{ asset('front/img/categories/product-item1.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Berpikir komputasional dalam bahasa pemrograman c++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -405,8 +403,8 @@
                                         <img src="{{ asset('front/img/categories/product-item2.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -414,8 +412,8 @@
                                         <img src="{{ asset('front/img/categories/product-item3.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Buku ajar : fisika dasar I</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                             </div>
@@ -425,8 +423,8 @@
                                         <img src="{{ asset('front/img/categories/product-item1.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Berpikir komputasional dalam bahasa pemrograman c++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -434,8 +432,8 @@
                                         <img src="{{ asset('front/img/categories/product-item2.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Dasar pemrograman dalam bahasa pemrograman C++</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -443,8 +441,8 @@
                                         <img src="{{ asset('front/img/categories/product-item3.jpg') }}" alt="">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>Crab Pool Security</h6>
-                                        <span>Rp 100.000</span>
+                                        <h6>Buku ajar : fisika dasar I</h6>
+                                        <!-- <span>Rp 100.000</span> -->
                                     </div>
                                 </a>
                             </div>
@@ -457,7 +455,7 @@
     <!-- Latest Product Section End -->
 
     <!-- Blog Section Begin -->
-    <section class="from-blog spad">
+    {{-- <section class="from-blog spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -514,6 +512,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Blog Section End -->
 @endsection
