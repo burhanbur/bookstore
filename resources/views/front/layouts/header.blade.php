@@ -44,7 +44,7 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="@if (Request::is('/') || Request::is('home*')) active @endif"><a href="{{ route('home') }}">Beranda</a></li>
-                            <li class="@if (Request::is('product-detail*')) active @endif"><a href="{{ route('shop') }}">Produk</a></li>
+                            <li class="@if (Request::is('shop*') || Request::is('product-detail*')) active @endif"><a href="{{ route('shop') }}">Produk</a></li>
                             <!-- <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
