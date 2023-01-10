@@ -51,23 +51,23 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large" src="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}" alt="">
+                            <img class="product__details__pic__item--large" src="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
-                            <img data-imgbigurl="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}"
-                                src="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}" alt="">
-                            <img data-imgbigurl="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}"
-                                src="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}" alt="">
-                            <img data-imgbigurl="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}"
-                                src="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}" alt="">
-                            <img data-imgbigurl="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}"
-                                src="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}" alt="">
+                            <img data-imgbigurl="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}"
+                                src="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}" alt="">
+                            <img data-imgbigurl="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}"
+                                src="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}" alt="">
+                            <img data-imgbigurl="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}"
+                                src="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}" alt="">
+                            <img data-imgbigurl="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}"
+                                src="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                        <h3>Protein Representation - Sequence Embedding</h3>
+                        <h3>Manajemen Keselamatan Konstruksi Jilid 1</h3>
                         <div class="product__details__rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="product__details__price">Rp 100.000</div>
                         <p>
-                        	Buku ini membahas konsep dasar berbagai metode NLP yang diadopsi dalam protein analisis dan kemudian penerapannya dalam mempelajari protein. Buku ini juga membahas keberhasilan, potensi, serta keterbatasan algoritma NLP dalam mempelajari protein.
+                        	Buku ini disusun untuk memudahkan seluruh masyarakat jasa konstruksi memahami apa itu Standar K4, SMKK, Rancangan Konseptual SMKK, 5 (lima) Elemen SMKK, Biaya Penerapan SMKK, dan diharapkan pembaca mampu memahami dan melaksanakan aturan mengenai keselamatan konstruksi di dalam pelaksanaan setiap tahapan konstruksi. Buku ini disusun berdasarkan materi bimbingan teknis dan sosialisasi yang telah kami lakukan baik di lingkungan Kementerian PUPR, Kementerian/Lembaga lain, Pemda, dan Asosiasi.
                         </p>
                         <div class="product__details__quantity">
                             <div class="quantity">
@@ -126,7 +126,7 @@
                                 <div class="product__details__tab__desc">
                                     <h6>Deskripsi Produk</h6>
                                     <p>
-                                    	Buku ini membahas konsep dasar berbagai metode NLP yang diadopsi dalam protein analisis dan kemudian penerapannya dalam mempelajari protein. Buku ini juga membahas keberhasilan, potensi, serta keterbatasan algoritma NLP dalam mempelajari protein.
+                                    	Buku ini disusun untuk memudahkan seluruh masyarakat jasa konstruksi memahami apa itu Standar K4, SMKK, Rancangan Konseptual SMKK, 5 (lima) Elemen SMKK, Biaya Penerapan SMKK, dan diharapkan pembaca mampu memahami dan melaksanakan aturan mengenai keselamatan konstruksi di dalam pelaksanaan setiap tahapan konstruksi. Buku ini disusun berdasarkan materi bimbingan teknis dan sosialisasi yang telah kami lakukan baik di lingkungan Kementerian PUPR, Kementerian/Lembaga lain, Pemda, dan Asosiasi.
                                     </p>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@
                                 <div class="product__details__tab__desc">
                                     <h6>Informasi Produk</h6>
                                     <p>
-                                    	Buku ini membahas konsep dasar berbagai metode NLP yang diadopsi dalam protein analisis dan kemudian penerapannya dalam mempelajari protein. Buku ini juga membahas keberhasilan, potensi, serta keterbatasan algoritma NLP dalam mempelajari protein.
+                                    	Buku ini disusun untuk memudahkan seluruh masyarakat jasa konstruksi memahami apa itu Standar K4, SMKK, Rancangan Konseptual SMKK, 5 (lima) Elemen SMKK, Biaya Penerapan SMKK, dan diharapkan pembaca mampu memahami dan melaksanakan aturan mengenai keselamatan konstruksi di dalam pelaksanaan setiap tahapan konstruksi. Buku ini disusun berdasarkan materi bimbingan teknis dan sosialisasi yang telah kami lakukan baik di lingkungan Kementerian PUPR, Kementerian/Lembaga lain, Pemda, dan Asosiasi.
                                     </p>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@
                                 <div class="product__details__tab__desc">
                                     <h6>Ulasan Pembeli</h6>
                                     <p>
-                                    	Buku ini membahas konsep dasar berbagai metode NLP yang diadopsi dalam protein analisis dan kemudian penerapannya dalam mempelajari protein. Buku ini juga membahas keberhasilan, potensi, serta keterbatasan algoritma NLP dalam mempelajari protein.
+                                    	Buku ini disusun untuk memudahkan seluruh masyarakat jasa konstruksi memahami apa itu Standar K4, SMKK, Rancangan Konseptual SMKK, 5 (lima) Elemen SMKK, Biaya Penerapan SMKK, dan diharapkan pembaca mampu memahami dan melaksanakan aturan mengenai keselamatan konstruksi di dalam pelaksanaan setiap tahapan konstruksi. Buku ini disusun berdasarkan materi bimbingan teknis dan sosialisasi yang telah kami lakukan baik di lingkungan Kementerian PUPR, Kementerian/Lembaga lain, Pemda, dan Asosiasi.
                                     </p>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/manajemen-keselamatan-konstruksi-bg.jpg') }}">
+                        <div class="product__item__pic set-bg" data-setbg="{{ asset('front/img/product/details/protein-representation-bg.jpg') }}">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -175,7 +175,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Manajemen Keselamatan Konstruksi Jilid 1</a></h6>
+                            <h6><a href="#">Protein Representation – Sequence Embedding</a></h6>
                             <h5>Rp 100.000</h5>
                         </div>
                     </div>

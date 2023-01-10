@@ -16,9 +16,13 @@ class HomeController extends Controller
         return view('front.contents.shop', get_defined_vars());
     }
 
-    public function detail(Request $request)
+    public function detail(Request $request, $slug)
     {
-        return view('front.contents.detail', get_defined_vars());
+        if ($slug == 'protein-representation-sequence-embedding') {
+            return view('front.contents.detail', get_defined_vars());  
+        } else {
+            return view('front.contents.brawijaya', get_defined_vars()); 
+        }
     }
 
     public function blog(Request $request)
