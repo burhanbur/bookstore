@@ -39,4 +39,37 @@ class HomeController extends Controller
     {
         return view('front.contents.contact', get_defined_vars());
     }
+
+    public function downloadProteinRepresentation()
+    {
+        $file= public_path(). "/books/protein_representation.pdf";
+
+        $headers = array(
+          'Content-Type: application/pdf',
+        );
+
+        return response()->download($file, 'protein_representation.pdf', $headers);
+    }
+
+    public function downloadSequenceModel()
+    {
+        $file= public_path(). "/books/sequence_model.pdf";
+
+        $headers = array(
+          'Content-Type: application/pdf',
+        );
+
+        return response()->download($file, 'sequence_model.pdf', $headers);
+    }
+
+    public function downloadConvolutionalNeuralNetwork()
+    {
+        $file= public_path(). "/books/convolutional_neural_network.pdf";
+
+        $headers = array(
+          'Content-Type: application/pdf',
+        );
+
+        return response()->download($file, 'convolutional_neural_network.pdf', $headers);
+    }
 }

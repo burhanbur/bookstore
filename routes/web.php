@@ -23,10 +23,15 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('product-detail/{slug}', [HomeController::class, 'detail'])->name('shop.detail');
 
+Route::group(['prefix' => 'download', 'as' => 'download.'], function() {
+	Route::get('protein_representation.pdf', [HomeController::class, 'downloadProteinRepresentation'])->name('protein.representation');
+	Route::get('sequence_model.pdf', [HomeController::class, 'downloadSequenceModel'])->name('sequence.model');
+	Route::get('convolutional_neural_network.pdf', [HomeController::class, 'downloadConvolutionalNeuralNetwork'])->name('convolutional.neural.network');
+});
+
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
-
     Route::group(['as' => 'admin.', 'prefix' => 'admin'], function() {
 
 	});
