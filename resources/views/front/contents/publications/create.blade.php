@@ -39,6 +39,13 @@
 
 @section('content')
 <div class="container">
+    @if (\Session::get('error'))
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ \Session::get('error') }}
+    </div>
+    @endif
+
 	<div class="">
 		<form method="POST" action="{{ route('publication.store') }}" enctype="multipart/form-data">
 			@csrf
