@@ -4,7 +4,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> info@universitaspertamina.ac.id</li>
+                                <li><i class="fa fa-envelope"></i> perpustakaan@universitaspertamina.ac.id</li>
                             </ul>
                         </div>
                     </div>
@@ -26,7 +26,14 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                @if (Auth::check())
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button class="btn-logout"><i class="fa fa-sign-out"></i> Logout</button>
+                                    </form>
+                                @else
+                                    <a href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -53,7 +60,7 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> -->
-                            <!-- <li class="@if (Request::is('blog*')) active @endif"><a href="{{ route('blog') }}">Blog</a></li> -->
+                            <li class="@if (Request::is('publication*')) active @endif"><a href="{{ route('publication') }}">Publikasi</a></li>
                             <li class="@if (Request::is('contact*')) active @endif"><a href="{{ route('contact') }}">Kontak</a></li>
                         </ul>
                     </nav>
@@ -63,6 +70,9 @@
                         <ul>
                             <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li> -->
                             <!-- <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li> -->
+                            <li>
+                                <a href="{{ route('publication.create') }}" style="color: black;"><i class="fa fa-upload"></i> &nbsp; Unggah</a>
+                            </li>
                         </ul>
                         <!-- <div class="header__cart__price">item: <span>Rp 0</span></div> -->
                     </div>

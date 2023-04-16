@@ -8,7 +8,7 @@
                         <ul>
                             <li><strong><i class="fa fa-map-marker"></i></strong> &nbsp; Jl. Teuku Nyak Arief, Simprug, Kebayoran Lama, Jakarta 12220.</li>
                             <li><strong><i class="fa fa-phone-square"></i></strong> &nbsp; (021) 50857540</li>
-                            <li><strong><i class="fa fa-envelope"></i></strong> &nbsp; info@universitaspertamina.ac.id</li>
+                            <li><strong><i class="fa fa-envelope"></i></strong> &nbsp; perpustakaan@universitaspertamina.ac.id</li>
                         </ul>
                     </div>
                 </div>

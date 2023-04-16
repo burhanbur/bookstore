@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PublicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('home', [HomeController::class, 'index'])->name('home');
 Route::get('shop', [HomeController::class, 'shop'])->name('shop');
-Route::get('blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('publication', [HomeController::class, 'publication'])->name('publication');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('product-detail/{slug}', [HomeController::class, 'detail'])->name('shop.detail');
@@ -34,5 +35,13 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     Route::group(['as' => 'admin.', 'prefix' => 'admin'], function() {
 
+	});
+
+	Route::group(['prefix' => 'publication', 'as' => 'publication.'], function() {
+		Route::get('create', [PublicationController::class, 'create'])->name('create');
+		Route::get('edit/{id}', [PublicationController::class, 'edit'])->name('edit');
+		Route::post('store', [PublicationController::class, 'store'])->name('store');
+		Route::put('update/{id}', [PublicationController::class, 'update'])->name('update');
+		Route::delete('delete', [PublicationController::class, 'delete'])->name('delete');	
 	});
 });

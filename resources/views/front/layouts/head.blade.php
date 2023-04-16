@@ -22,4 +22,23 @@
     <link rel="stylesheet" href="{{ asset('front/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('front/css/style.css') }}" type="text/css">
 
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .btn-logout {
+            border: none;
+            background: transparent;
+        }
+    </style>
+
     @yield('css')
