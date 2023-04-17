@@ -38,6 +38,7 @@ class HomeController extends Controller
     {
         $data = [];
         $errMessage = null;
+        $limit = 10;
 
         $title = $request->title;
         $category = $request->category;
@@ -62,7 +63,14 @@ class HomeController extends Controller
                 });
             }
 
-            $data = $data->paginate(10);
+            $data = $data->orderBy('created_at', 'DESC')->get()->toArray();
+
+            // pagination
+            $page = ($request->get('page')) ? $request->get('page') : 1;
+            $total = count($data);
+            $offset = ($page - 1) * $limit;
+            $data = array_slice($data, $offset, $limit);
+            $totalPages = ceil($total / $limit);
         } catch (Exception $ex) {
             if (env('APP_DEBUG')) {
                 $errMessage = $ex->getMessage().' in file '.$ex->getFile(). ' at line '.$ex->getLine();
@@ -74,6 +82,26 @@ class HomeController extends Controller
         }
 
         return view('front.contents.publications.index', get_defined_vars());
+    }
+
+    public function showPublication($slug)
+    {
+        $data = null;
+        $errMessage = null;
+
+        try {
+            $data = Publication::where('slug', $slug)->firstOrFail();
+        } catch (Exception $ex) {
+            if (env('APP_DEBUG')) {
+                $errMessage = $ex->getMessage().' in file '.$ex->getFile(). ' at line '.$ex->getLine();
+            } else {
+                $errMessage = $this->errMessage;
+            }
+
+            \Session::flash('error', $errMessage);            
+        }
+
+        return view('front.contents.publications.show', get_defined_vars());   
     }
 
     public function post(Request $request)

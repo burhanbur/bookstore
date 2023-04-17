@@ -14,6 +14,11 @@
 		.publication-content {
 			padding-bottom: 3%;
 		}
+
+		.active-page {
+			color: white !important;
+			background: #7fad39;
+		}
 	</style>
 @endsection
 
@@ -55,34 +60,42 @@
 	</form>
 
 	<div class="publication-content">
-		@if (!$data->isEmpty())
+		@if ($data)
 			@foreach($data as $key => $row)
 				<div class="form-group">
-					<a class="text-title" href="">
-						<strong>{{ $row->name }}</strong>
+					<a class="text-title" href="{{ route('show.publication', $row['slug']) }}">
+						<strong>{{ $row['name'] }}</strong>
 					</a>
 					<br>
-					<label>{{ $row->author->name }} ({{ $row->year }})</label>
+					<label>{{ @\App\Models\User::find($row['author_id'])->name }} ({{ $row['year'] }})</label>
+
+					@if (@\Auth::user()->id == $row['author_id'])
+					<form style="display: inline;" method="POST" action="{{ route('publication.delete', $row['id']) }}" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-xs btn-danger">Hapus</button>	
+					</form>
+					<a href="{{ route('publication.edit', $row['slug']) }}" class="btn btn-xs btn-info">Ubah</a>
+					@endif
+
 					<p class="text-paragraph">
-						{{ Str::limit($row->description, 300) }}
+						{{ Str::limit($row['description'], 300) }}
 					</p>
 					<div class="text-right">
-						<a style="color: #7fad39;" href="">Baca Selengkapnya</a>
+						<a style="color: #7fad39;" href="{{ route('show.publication', $row['slug']) }}">Baca Selengkapnya</a>
 					</div>
 
-					@if (!$row === end($data))
-						<hr>
-					@endif
+					<hr>
 				</div>
 			@endforeach
 
-			{{ $data->links() }}
-
 			<div class="product__pagination">
-	            <a href="#">1</a>
-	            <a href="#">2</a>
-	            <a href="#">3</a>
-	            <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+				@if ($totalPages > 1)
+					@for($i = 1; $i <= $totalPages; $i++)
+						@php $isActive = $i == $page ? 'active-page' : ''; @endphp
+			            <a href="?page={{ $i }}" class="{{ $isActive }}">{{ $i }}</a>
+					@endfor
+				@endif
 	        </div>
 		@else 
 			<strong class="text-title text-center">Tidak ada artikel yang dipublikasi</strong>

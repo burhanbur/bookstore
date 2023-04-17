@@ -20,11 +20,14 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('home', [HomeController::class, 'index'])->name('home');
 Route::get('shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('publication', [HomeController::class, 'publication'])->name('publication');
+Route::get('publication/{slug}', [HomeController::class, 'showPublication'])->name('show.publication');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('product-detail/{slug}', [HomeController::class, 'detail'])->name('shop.detail');
 
 Route::group(['prefix' => 'download', 'as' => 'download.'], function() {
+	Route::get('/', [PublicationController::class, 'download'])->name('repository');
+
 	Route::get('protein_representation.pdf', [HomeController::class, 'downloadProteinRepresentation'])->name('protein.representation');
 	Route::get('sequence_model.pdf', [HomeController::class, 'downloadSequenceModel'])->name('sequence.model');
 	Route::get('convolutional_neural_network.pdf', [HomeController::class, 'downloadConvolutionalNeuralNetwork'])->name('convolutional.neural.network');
@@ -39,9 +42,9 @@ Route::group(['middleware' => ['auth']], function() {
 
 	Route::group(['prefix' => 'publication', 'as' => 'publication.'], function() {
 		Route::get('create', [PublicationController::class, 'create'])->name('create');
-		Route::get('edit/{id}', [PublicationController::class, 'edit'])->name('edit');
+		Route::get('edit/{slug}', [PublicationController::class, 'edit'])->name('edit');
 		Route::post('store', [PublicationController::class, 'store'])->name('store');
-		Route::put('update/{id}', [PublicationController::class, 'update'])->name('update');
-		Route::delete('delete', [PublicationController::class, 'delete'])->name('delete');	
+		Route::put('update/{slug}', [PublicationController::class, 'update'])->name('update');
+		Route::delete('delete/{id}', [PublicationController::class, 'delete'])->name('delete');	
 	});
 });
