@@ -149,12 +149,6 @@ class PublicationController extends Controller
 	            File::makeDirectory($this->repository, 0775, TRUE);
 	        }
 
-	        if ($request->hasFile('cover')) {
-	            $cover = $request->file('cover');
-	            $file_cover = date('YmdHis').'_'.$cover->getClientOriginalName();
-	            $cover->move($this->repository, $file_cover);
-	        }
-
 			$data = Publication::where('slug', $slug)->first();
 
 			if (!$data) {
@@ -164,13 +158,19 @@ class PublicationController extends Controller
 			$data->author_id = \Auth::user()->id;
 			$data->ref_type_id = $request->ref_type_id;
 			$data->serial_number = $request->serial_number;
-			$data->slug = \Str::slug($request->name).'-'.date('Y-m-d-H-i-s');
-			$data->cover = $file_cover;
 			$data->name = $request->name;
 			$data->year = $request->year;
 			$data->publisher = $request->publisher;
 			$data->is_public = ($request->is_public) ? true : false;
 			$data->description = $request->description;
+
+	        if ($request->hasFile('cover')) {
+	            $cover = $request->file('cover');
+	            $file_cover = date('YmdHis').'_'.$cover->getClientOriginalName();
+	            $cover->move($this->repository, $file_cover);
+				$data->cover = $file_cover;
+	        }
+
 			$data->save();
 
             $filename = $request->file_name;
@@ -192,16 +192,25 @@ class PublicationController extends Controller
             $u_filename = $request->u_file_name;
             $u_filepath = $request->file('u_file_path');
 
-            foreach ($u_id as $key => $file) {
-	            $files = date('YmdHis').'_'.$u_filepath[$key]->getClientOriginalName();
-	            $file->move($this->repository, $files);
+            // if ($request->hasFile('u_filepath') && count((array) $u_id) == count((array) $u_filepath)) {
 
-            	FileModel::find($file)->update([
+            // }
+
+            for ($i = 0; $i < count((array) $u_id); $i++) {
+	            $arrData = [
             		'publication_id' => $data->id,
-            		'name' => $u_filename[$key],
-            		'file_path' => $u_filepath[$key],
+            		'name' => $u_filename[$i],
             		'created_by' => \Auth::user()->id
-            	]);
+            	];
+
+	            if (@$u_filepath[$i]) {
+		            $files = date('YmdHis').'_'.$u_filepath[$i]->getClientOriginalName();
+		            var_dump($files);
+		            $u_filepath[$i]->move($this->repository, $files);
+		            $arrData['file_path'] = $files;
+	            }
+
+            	FileModel::find($u_id[$i])->update($arrData);
             }
 
 			DB::commit();

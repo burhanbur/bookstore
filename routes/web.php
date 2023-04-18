@@ -20,7 +20,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('home', [HomeController::class, 'index'])->name('home');
 Route::get('shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('publication', [HomeController::class, 'publication'])->name('publication');
-Route::get('publication/{slug}', [HomeController::class, 'showPublication'])->name('show.publication');
+Route::get('show/publication/{slug}', [HomeController::class, 'showPublication'])->name('show.publication');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('product-detail/{slug}', [HomeController::class, 'detail'])->name('shop.detail');

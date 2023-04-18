@@ -60,7 +60,7 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> -->
-                            <li class="@if (Request::is('publication*')) active @endif"><a href="{{ route('publication') }}">Publikasi</a></li>
+                            <li class="@if (Request::is('publication*') || Request::is('show/publication*')) active @endif"><a href="{{ route('publication') }}">Publikasi</a></li>
                             <li class="@if (Request::is('contact*')) active @endif"><a href="{{ route('contact') }}">Kontak</a></li>
                         </ul>
                     </nav>
