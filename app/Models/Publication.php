@@ -12,7 +12,7 @@ class Publication extends Model
     protected $table = 'publications';
     protected $guarded = [];
 
-    public function author()
+    public function createdBy()
     {
         return $this->belongsTo(User::class, 'author_id');
     }

@@ -67,7 +67,7 @@
 						<strong>{{ $row['name'] }}</strong>
 					</a>
 					<br>
-					<label>{{ @\App\Models\User::find($row['author_id'])->name }} ({{ $row['year'] }})</label>
+					<label>{{ $row['author'] }} ({{ $row['year'] }})</label>
 
 					@if (@\Auth::user()->id == $row['author_id'])
 					<form style="display: inline;" method="POST" action="{{ route('publication.delete', $row['id']) }}" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">

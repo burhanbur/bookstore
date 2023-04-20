@@ -62,6 +62,11 @@
 				<input type="text" class="form-control" name="name" value="{{ $data->name }}" required>
 			</div>
 
+			<div class="form-group">
+				<label>Penulis</label>
+				<input type="text" class="form-control" name="author" value="{{ $data->author') }}" required>
+			</div>
+
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">

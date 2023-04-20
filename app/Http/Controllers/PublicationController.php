@@ -77,6 +77,7 @@ class PublicationController extends Controller
 	        }
 
 			$data = new Publication;
+			$data->author = $request->author;
 			$data->author_id = \Auth::user()->id;
 			$data->ref_type_id = $request->ref_type_id;
 			$data->serial_number = $request->serial_number;
@@ -155,6 +156,7 @@ class PublicationController extends Controller
 				throw new \Exception("Data tidak ditemukan", 1);
 			}
 
+			$data->author = $request->author;
 			$data->author_id = \Auth::user()->id;
 			$data->ref_type_id = $request->ref_type_id;
 			$data->serial_number = $request->serial_number;

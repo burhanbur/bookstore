@@ -47,7 +47,7 @@
 				<div class="form-group">
 					<strong>Author</strong>
 					<br>
-					<label>{{ $data->author->name }}</label>
+					<label>{{ $data->author }}</label>
 				</div>
 				<div class="form-group">
 					<strong>Tahun</strong>
@@ -72,12 +72,14 @@
 				</p>
 
 				<p class="text-left">
-					URI <br> <a href="{{ \URL::current() }}">{{ \URL::current() }}</a>
+					<strong>URI</strong> <br> <a href="{{ \URL::current() }}">{{ \URL::current() }}</a>
 				</p>
 
 				<p>
-					File: <br>
+					<strong>FILE</strong> <br>
 					@foreach(\App\Models\File::where('publication_id', $data->id)->get() as $key => $value)
+						<label>{{ $value->name }}</label>:
+						<br>
 						<a href="{{ asset('repository/'.$value->file_path) }}" target="_blank">{{ $value->file_path }}</a>
 						<br>
 					@endforeach
