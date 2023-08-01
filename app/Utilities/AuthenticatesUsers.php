@@ -28,20 +28,20 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-        if (env('SSO_MODE')) {
-            switch (env('APP_ENV')) {
-                case 'local':
-                    return Redirect::to('http://localhost/pertamina/public/sso-login?redirect_url=http://localhost/akreditasi/public/auth');
-                    break;
-                case 'live':
-                    return Redirect::to('https://sso.universitaspertamina.ac.id/sso-login?redirect_url=https://akreditasi.universitaspertamina.ac.id/auth');
-                    break;
-                default:
-                    break;
-            }                     
-        } else {             
+        // if (env('SSO_MODE')) {
+        //     switch (env('APP_ENV')) {
+        //         case 'local':
+        //             return Redirect::to('http://localhost/pertamina/public/sso-login?redirect_url=http://localhost/akreditasi/public/auth');
+        //             break;
+        //         case 'live':
+        //             return Redirect::to('https://sso.universitaspertamina.ac.id/sso-login?redirect_url=https://akreditasi.universitaspertamina.ac.id/auth');
+        //             break;
+        //         default:
+        //             break;
+        //     }                     
+        // } else {             
             return view('auth.login');         
-        }
+        // }
     }
 
     /**
@@ -54,15 +54,15 @@ trait AuthenticatesUsers
      */
     public function login(Request $request)
     {
-        if (env('SSO_MODE')) {
-            if (env('APP_ENV') == 'live') {
-                $request->password = 'password123';
-            } else {
-                $request->password = 'burhan123';
-            }
-        } else {             
+        // if (env('SSO_MODE')) {
+        //     if (env('APP_ENV') == 'live') {
+        //         $request->password = 'password123';
+        //     } else {
+        //         $request->password = 'burhan123';
+        //     }
+        // } else {             
             $this->validateLogin($request);         
-        }
+        // }
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
@@ -143,7 +143,7 @@ trait AuthenticatesUsers
                 }
 
                 DB::commit();
-                // Auth::loginUsingId($id);
+                Auth::loginUsingId($id);
 
                 $returnValue = true;
             }
