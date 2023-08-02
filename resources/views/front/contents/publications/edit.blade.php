@@ -64,7 +64,7 @@
 
 			<div class="form-group">
 				<label>Penulis</label>
-				<input type="text" class="form-control" name="author" value="{{ $data->author') }}" required>
+				<input type="text" class="form-control" name="author" value="{{ $data->author }}" required>
 			</div>
 
 			<div class="row">
@@ -119,6 +119,7 @@
 						<label>Gambar Sampul</label>
 						<br>
 						<input type="file" name="cover" accept="image/*">
+                		<a href="{{ asset('repository/'.$data->cover) }}" target="_blank">{{ $data->cover }}</a><br>
 					</div>					
 				</div>
 			</div>

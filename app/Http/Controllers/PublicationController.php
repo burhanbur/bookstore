@@ -49,8 +49,8 @@ class PublicationController extends Controller
         	'name' => ['required', 'string'],
         	'year' => ['required'],
         	'publisher' => ['required', 'string'],
-        	'cover' => 'nullable|mimes:png,jpeg,jpg|max:2048',
-        	'file_path.*' => 'nullable|mimes:pdf,png,jpeg,jpg|max:2048'
+        	'cover' => 'nullable|mimes:png,jpeg,jpg|max:25600',
+        	'file_path.*' => 'nullable|mimes:pdf,png,jpeg,jpg|max:25600'
         ]);
 
         if ($validator->fails()) {
