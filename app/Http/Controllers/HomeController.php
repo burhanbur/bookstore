@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Publication;
 
+use Exception;
+
 class HomeController extends Controller
 {
     public $errMessage;
@@ -45,16 +47,17 @@ class HomeController extends Controller
         $author = $request->author;
 
         try {
-            $data = Publication::where('is_public', true);
+            $data = Publication::with(['createdBy', 'pubCat'])->where('is_public', true);
 
             if ($title) {
                 $data->where('name', 'like', '%'.$title.'%');
             }
 
             if ($author) {               
-                $data->whereHas('author', function($query) use ($author) {
-                    $query->where('name', 'like', '%'.$author.'%');
-                });
+                // $data->whereHas('author', function($query) use ($author) {
+                //     $query->where('name', 'like', '%'.$author.'%');
+                // });
+                $data->where('author', 'like', '%'.$author.'%');
             }
 
             if ($category) {                

@@ -73,7 +73,7 @@ class PublicationController extends Controller
 	        }
 
 	        if (Publication::where('serial_number', $request->serial_number)->exists()) {
-	        	throw new \Exception("Serial Number telah terdaftar", 1);
+	        	throw new \Exception("Nomor ISSN/ISBN telah terdaftar", 1);
 	        }
 
 			$data = new Publication;
@@ -114,6 +114,7 @@ class PublicationController extends Controller
 				$errMessage = $ex->getMessage().' in file '.$ex->getFile(). ' at line '.$ex->getLine();
 			} else {
 				$errMessage = $this->errMessage;
+				Log::error($ex->getMessage().' in file '.$ex->getFile(). ' at line '.$ex->getLine());
 			}
 
 			\Session::flash('error', $errMessage);

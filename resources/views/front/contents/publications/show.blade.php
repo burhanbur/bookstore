@@ -6,6 +6,10 @@
 			color: #7fad39;
 		}
 
+		.text-title:hover {
+			color: rgb(104, 134, 60);
+		}
+
 		.text-paragraph {
 			text-align: justify;
 		}
@@ -23,6 +27,10 @@
 		.text-justify {
 			text-align: justify;
 		}
+
+		a:hover {
+            color: rgb(104, 134, 60);
+        }
 	</style>
 @endsection
 
@@ -64,6 +72,11 @@
 					<br>
 					<label>{{ $data->type->name }}</label>
 				</div>
+				<div class="form-group">
+					<strong>ISSN/ISBN</strong>
+					<br>
+					<label>{{ $data->serial_number }}</label>
+				</div>
 			</div>
 
 			<div class="col-md-8">
@@ -80,7 +93,7 @@
 					@foreach(\App\Models\File::where('publication_id', $data->id)->get() as $key => $value)
 						<label>{{ $value->name }}</label>:
 						<br>
-						<a href="{{ asset('repository/'.$value->file_path) }}" target="_blank">{{ $value->file_path }}</a>
+						<a href="{{ asset('repository/'.$value->file_path) }}" target="_blank"><img src="{{ asset('pdf.png') }}" alt=""></a>
 						<br>
 					@endforeach
 				</p>

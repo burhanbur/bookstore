@@ -7,6 +7,10 @@
 			font-size: 20px;
 		}
 
+		.text-title:hover {
+            color: rgb(104, 134, 60);
+        }
+
 		.text-paragraph {
 			text-align: justify;
 		}
